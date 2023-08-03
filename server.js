@@ -38,12 +38,12 @@ const credentials = {
 // Configure nodemailer for sending emails
 const transporter = nodemailer.createTransport({
   // service: "your_email_service_provider",
-  host: "premium50.web-hosting.com",
-  port: "465",
+  host: process.env.MAILHOST,
+  port: process.env.MAILPORT,
   secure: true,
   auth: {
-    user: "admin@xeedev.com",
-    pass: "yLhp@Y8$P6Me",
+    user: process.env.MAILUSER,
+    pass: process.env.MAILPASSWORD,
   },
 });
 
